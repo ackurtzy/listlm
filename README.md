@@ -130,25 +130,6 @@ Detailed design notes and configuration tips are in `docs/`:
 - `docs/updated_architecture.md` – evolved architecture diagram and rationale
 - `docs/CONFIG_GUIDE.md` – configuration reference with environment overrides
 
-## License
-
-Specify your license here (e.g., MIT, Apache 2.0). Add a `LICENSE` file in the
-repo root if needed.
-
-## Contributing
-
-Pull requests and issue reports are welcome! Please include:
-
-- A clear description of the change or bug
-- Tests or manual steps taken to verify the behavior
-- Any new configuration options documented in `docs/CONFIG_GUIDE.md`
-
-## Troubleshooting
-
-- **Duplicate warnings** – handled internally by deterministic ID assignment;
-  ensure you’re on the latest code.
-- **Short refined output** – add more searches, adjust `WORKER_POOL_SIZE`, or
-  tweak `max_records` in `ResultRefiner` to expose more candidates to the LLM.
 - **API errors** – confirm `OPENAI_API_KEY` is set and the selected models are
   enabled in your account.
 
