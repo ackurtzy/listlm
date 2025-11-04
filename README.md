@@ -1,4 +1,4 @@
-# Desai Search
+# ListLM
 
 Desai Search is a terminal-first Python workflow for harvesting structured data
 about companies (or other entities) from the open web using the OpenAI API for
