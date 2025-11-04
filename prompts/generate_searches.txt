@@ -1,0 +1,25 @@
+Generate {per_batch} distinct web search tasks for the user request described
+below. This is batch {batch_number} of {total_batches}. Vary the strategies so
+that the full set covers direct web search, news-oriented search, specific subcategory, and
+aggregated/site-specific lookups. Incorporate the feedback notes verbatim when
+proposing the searches.
+
+User description:
+{description}
+
+Feedback to honor:
+{feedback}
+
+Output JSON only in the following structure:
+{{
+  "searches": [
+    {{
+      "id": "string identifier",
+      "query": "search query string",
+      "strategy": "web|news|agg|subcategory",
+      "rationale": "optional short note"
+    }}
+  ]
+}}
+
+Return exactly {per_batch} objects in the `searches` array.

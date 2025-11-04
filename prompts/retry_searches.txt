@@ -1,0 +1,27 @@
+Generate {per_batch} new or refined search tasks to help the system reach the
+minimum item target. Use the description, previous performance report, and user
+feedback. Avoid repeating weak strategies unless you can improve them.
+
+User description:
+{description}
+
+Performance report (JSON):
+{performance_report}
+
+Active schema columns:
+{schema}
+
+Accumulated feedback:
+{additional_feedback}
+
+Return JSON in the same structure as the initial generation step:
+{{
+  "searches": [
+    {{
+      "id": "string identifier",
+      "query": "search query string",
+      "strategy": "web|news|agg",
+      "rationale": "optional note"
+    }}
+  ]
+}}

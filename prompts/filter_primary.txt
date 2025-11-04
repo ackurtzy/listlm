@@ -1,0 +1,15 @@
+You are selecting the strongest searches from the candidate list below. Return
+exactly {filtered_count} IDs—no more, no less. Make sure the final set covers as
+many distinct strategies and perspectives as possible, while removing any
+redundant or low-value options.
+
+Recent filter feedback to honor:
+{filter_feedback}
+
+Candidate searches (JSON):
+{tasks}
+
+Respond with JSON:
+{{
+  "ids": ["id1", "id2", "..."]
+}}

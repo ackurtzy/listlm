@@ -1,0 +1,14 @@
+Design an ordered list of CSV columns for the following research problem. Keep
+the fields concise and focused on the minimum data needed for a useful
+spreadsheet. Provide 4-8 columns.
+
+User description:
+{description}
+
+Example queries:
+{example_queries}
+
+Return JSON:
+{{
+  "columns": ["column_a", "column_b", "..."]
+}}

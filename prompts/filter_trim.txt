@@ -1,0 +1,16 @@
+You are trimming an already filtered list of searches. The current selection is
+{current_count} searches, but the strict target is {filtered_count}. Remove
+exactly {remove_count} IDs so that the remaining set has size {filtered_count}.
+Keep the broadest diversity you can while eliminating the weakest or most
+redundant entries.
+
+Recent filter feedback to honor:
+{filter_feedback}
+
+Candidate searches (JSON):
+{tasks}
+
+Respond with JSON:
+{{
+  "ids": ["id1", "id2", "..."]
+}}

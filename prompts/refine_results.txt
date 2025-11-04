@@ -1,0 +1,35 @@
+You are given noisy candidate entries that may mix real companies with articles,
+directories, or duplicates. Produce a clean JSON response that lists unique entities
+matching the user goal: {user_description}.
+
+- Use the candidate data as hints, but ignore items that are clearly articles,
+  events, media sites, or unrelated organizations.
+- Only keep companies that appear in the candidate entries or are explicitly
+  named within those entries.
+- When an entry references an article, infer the actual company names mentioned
+  and include them instead of the article itself.
+- Ensure every company has a concise description (≤35 words) that reflects its
+  relevance to the goal. Add a website if you can infer or confirm one from the data.
+- Include an email only if it appears explicit in the candidates.
+- Deduplicate strictly by company identity (same company → one entry).
+- Favor companies that match the user goal: {user_description}
+
+Requested output columns: {requested_columns}
+Schema fields to fill (excluding metadata): {schema_fields}
+Each company object must include every field listed above. Use empty strings when data
+cannot be confirmed.
+
+Candidate entries (JSON):
+{candidate_json}
+
+Return JSON only in this structure:
+{{
+  "companies": [
+    {{
+      "name": "Company name",
+      "field_2": "...",
+      "field_3": "...",
+      "... additional schema fields ..."
+    }}
+  ]
+}}
